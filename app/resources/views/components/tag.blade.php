@@ -1,4 +1,4 @@
-@props(['size' => 'base'])
+@props(['size' => 'base', 'tag'])
 
 @php
   $sizes = [
@@ -21,7 +21,7 @@
 
 <button
   class="hover:bg-white/15 {{ $size }} m-0.5 rounded-lg bg-white/5 px-2 py-1 transition-all duration-300 active:scale-95">
-  <a href="#">
-    {{ $slot }}
+  <a href="/tags/{{ strtolower($tag->name) }}">
+    {{ $tag->name }}
   </a>
 </button>
