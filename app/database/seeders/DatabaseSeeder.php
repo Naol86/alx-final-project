@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $tags = Tag::factory(3)->create();
-        Job::factory(10)->hasAttached($tags)->create();
+        Job::factory(20)->hasAttached($tags)->create();
+        Tag::factory(12)->create();
 
         User::factory()->create([
             'name' => 'Test User',
